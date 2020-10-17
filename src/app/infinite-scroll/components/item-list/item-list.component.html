@@ -1,0 +1,13 @@
+<div>
+  <h1>Card list with infinite scroll</h1>
+  <div
+    class="card-list"
+    infiniteScroll
+    [infiniteScrollThrottle]="scrollThrottle"
+    (scrolled)="nextPage()"
+    [scrollWindow]="false"
+  >
+    <app-card *ngFor="let item of theArray">{{ item }}</app-card>
+  </div>
+  <div>loading...</div>
+</div>
